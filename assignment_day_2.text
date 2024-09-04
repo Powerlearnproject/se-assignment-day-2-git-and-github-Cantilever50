@@ -1,0 +1,476 @@
+# Answers to part-1
+
+
+"Answer-to-Ques-1"
+
+
+Concept of Version Control and why Github is a  Popular tool for Managing Version of Code. 
+
+Concept of Version control system(VCS):
+
+A version control system(VCS) tracks and record changes to any file (or a group of files) allowing you
+to recall specific iterations later on or as needed. VCSs are sometimes called source code management (SCM) 
+or revision control systems (RCS).
+
+Version control allows numerous team members to work collaboratively on a project , even if they are not 
+in the same room or even country.
+
+Git is commonly thought of as a sofware development tool, which it is, but it can be used for version 
+control(versioning) on any kind of file, be it lines of code, a design layout for a new website, or a song.
+
+
+Why GitHub is  a popular tool for version control system:
+
+Git is a version control system , while GitHub is a cloud-based hosting service that helps teams manage
+their repositories.
+
+GitHub is widely used among developers because it allows collaboration with other developers around 
+the globe. developers can share their knowledge with the world. use cases for Github includes
+
+-  Open-source projects: It allows you to share project with individuals who want to use your software,
+collaborate on it, and network with developers on different levels. The networking capabilities, in particular,
+have earned GitHub a classification as a social media site. Also, you can link it to other community sites like
+Reddit via the repository notes.
+
+-  Enterprise solutions: Bussinesses use Github as a version control sysytem, with their Development
+team  members tracking changes to source codes while others collaborate. As a result, multiple coders work
+on the latest code version, simplifying project management. The Enterprise tier helps with this by providing 
+regulatory support and compliance.
+
+
+-  Instructing tool: Not everyone understands Github at first, but with programming instructors and 
+students around, they can apply Github in several ways. Interested users will be guided on how to use
+Github via many low-cost resources.  
+
+-  GitHub is also available to nonprogrammers to work on document-based and multimedia projects.
+
+
+
+
+
+
+
+
+"Answer-to-Ques-2"
+
+How to set up a new repository on Github:
+
+If you are not familiar with the word repository, you can think of it as a project. It would hold 
+all of the files of your application or website that you are building. People usually call their 
+repository a repo for short.
+
+To create a new repository on GitHub, you have to click on the + sign on the top right corner or 
+click on the green NEW button in the top-left where repositories are mentioned and then click on the New
+Repository button:
+
+After that, you'll get to a page where you can specify the information
+for your new repository like:
+
+The name of the project: Here, make sure to use something  descriptive
+
+Some general description about the project and what it is about
+
+Choose whether you want the repository to be Public or Private
+
+Select initialize with a README
+
+Once you've added the necessary information and hit the create button, you will get to a page 
+with some instructions on how to push your local project to GitHub:
+
+
+
+
+"Answer-to-Ques-3"
+
+The README.md file is an essential part of each project. The .md extension stands for Markdown.
+
+You can think of the README.md file as the introduction to your repository. It's beneficial because
+while looking at someone's repo, you can just scroll down to their README file and have a look at 
+what their project is all about.
+
+And it is crucial that your project is properly introduced. Because if the project itself isn't 
+introduced properly, no one will spend their time helping to improve it and try to develop 
+it further.
+
+That's why having a good README file is necessary and it shouldn't be overlooked, and you 
+should spend a considerable amount of your time on it.
+
+In this post, I am going to share some tips with you about how you can improve your README file, 
+and hopefully, it will help you with your repositories.
+
+
+
+
+"Answer-to-Ques-4"
+
+
+Depending on the project and whether or not it is open source, you can set your repository to be 
+public or private.
+
+The main difference is that, with a public repository anyone on the internet can see that repository.
+Even though they'll be able to see the repository and read the code, you will be the maintainer
+of the project, and you will choose who can commit.
+
+Whereas a private repository will only be accessible to you and those you have invited.
+
+Public repositories are used for open source projects.
+
+
+
+"Answer-to-Ques-5"
+
+
+A commit is when you tell git that a change (or addition) you have made is ready to be included in 
+the project.
+
+
+Steps involved in making your first commit to a GitHub repository:
+
+Once you have added/staged your files, the next step is actually to
+commit the changes. So if you run git status again, you will be able to
+see that Git tells us that there are changes to be committed:
+
+Changes to be committed:
+
+(use "git rm --cached <file>..." to unstage)
+     new file: README.md
+
+In this case, it is only the README.md file that will be committed. So in order to do so, 
+we can run the following command:
+
+    git commit -m "Your Commit Message Here"
+
+
+
+Rundown of the command:
+
+git commit: here, we are telling git that we want to commit the changes that we've staged with
+the git add command.
+
+ -m: this flag indicates that we will specify our commit message directly after that
+
+Finally, in the quotes we've got our commit message, it is important to write short and descriptive 
+commit messages In our case we could set our commit message to something like "Initial commit" or 
+"Add README.md" file, for example.
+
+If you don't specify the -m flag, Git will open the default text editor
+
+
+
+
+
+Committing directly without staging files:
+If you have not already staged your changes using git add command
+you can still directly commit all your changes using the following
+command.
+git commit -a -m "Your Commit Message Here"
+The -a flag here will automatically stage all the changes and commit
+them
+
+
+
+
+
+"Answer-to-Ques-6"
+
+A branch in Git is simply a lightweight movable pointer to one of these commits.
+
+
+Creating a new branch:
+
+Let's start by creating a new branch called newFeature. In order to create the branch, you could 
+use the following command:
+
+git branch newFeature
+
+Now, in order to switch to that new branch, you would need to run the
+following command:
+
+git checkout newFeature
+
+Note: You can use the git checkout command to switch between
+different branches.
+
+The above two commands could be combined into 1, so that you don't have to create the branch 
+first and then switch to the new branch. You could use this command instead, which would do both:
+
+git checkout -b newFeature
+
+Once you run this command, you will see the following output:
+
+Switched to a new branch 'newFeature'
+
+In order to check what branch you are currently on, you can use the
+following command:
+
+git branch
+
+
+
+Merging a branch:
+
+You can do that by following these steps:
+
+1) First switch to your main branch:
+     git checkout main
+2) After that, in order to merge your newFeature branch and the changes that we created in the 
+last chapter, run the following git
+    
+merge command:
+    git merge newFeature
+Output:
+Updating ab1007b..a281d25
+Fast-forward
+feature1.html | 1 +
+1 file changed, 1 insertion(+)
+create mode 100644 feature1.html
+
+As you were on the main branch when you ran the git merge command, Git will take all of the 
+commits from that branch and merge them into the main branch.
+
+Now, if you run the ls command, you will be able to see the new feature1.html file, and if you 
+check the commit history with the git log command, you will see the commit from the newFeature 
+branch present on your main branch.
+
+Before doing the merge, you could again use the git diff command to check the differences between 
+your current branch and the branch that you want to merge. For example, if you are currently on the 
+main branch, you could use the following:
+
+  git diff newFeature
+
+In this case, the merge went through smoothly as there were no merge conflicts. However, if you are 
+working on a real project with multiple people making changes, there might be some merge conflicts.
+
+Essentially this happens when changes are made to the same line of a file, or when one developer 
+edits a file on one branch and another developer deletes the same file.
+
+
+
+"Answer-to-Ques-7"
+
+A pull request: also referred to as a merge request – is an event that takes place in software
+development when a contributor/developer is ready to begin the process of merging new code changes 
+with the main project repository.
+
+
+A project’s repository (or “repo”) is where all the project code, product knowledge, metadata, and much more data/information is stored. A
+repository maintainer/manager is someone on a DevOps or operations team who is responsible for maintaining said repository. They are in charge of
+which updates can be merged with the final project and ultimately made available to end users.
+
+
+During a pull request, the repository maintainer reviews new code updates from a developer to
+determine whether or not it is ready to be released. Without pull requests, unfinished or incorrectly
+written code updates could be prematurely merged with the main repository and break or cause issues
+with the live product. Pull requests ensure the integrity and user experience of the product by only 
+merging code that has been appropriately reviewed and approved.
+
+In addition to protecting the main project repository, pull requests also encourage collaboration 
+and open communication when working on new product updates. They also help to keep teams motivated 
+by highlighting and notifying the team when someone completes a new feature.
+
+
+How do Pull Requests Work?
+
+A pull request works by allowing developers to create new features or squash bugs without affecting
+the main project code or what the users are seeing. This way, they are able to write and test code
+changes locally without having to worry about breaking the overall product.
+
+
+
+
+Pull requests follow a basic five step process:
+
+Fork Main Repository and Create a Local Clone: First, the developer creates a fork of the main 
+repository, and then clones this onto their local machine.
+
+Make Needed Changes Locally: The developer then is able to make their needed changes or additions
+to the code whether they are working on resolving an issue or new feature.
+
+Push Local Changes to Forked Repository. Once the developer has completed and tested the new code
+changes, they push these changes back to the forked repository they created in step one.
+
+Make a Pull Request:This is where the actual pull request takes place!.After requesting a pull 
+request, the main repository maintainer is alerted for review. The maintainer will then review
+the work done in the developer’s forked repository, and then make any comments or request any 
+edits that need to be made for approval.Any edits are then sent back to the developer for additional
+commits(changes to code) that may be needed.If no edits are needed, the pull request is approved
+by the maintainer.Merge with Main Project. Once the repository maintainer has approved a pull request,
+the developer’s new updates in the forked repository are merged with the main project repository.
+The product is then updated with the new feature or bug fix, and can now be viewed by end users.
+In some cases, a developer may also make a pull request for a feature or update that is not yet
+completed.This way, if a developer is stuck on a new update they’ve been working on, they can now
+get feedback from other team members and work through possible solutions. In either case, using 
+pull requests ensures that any new update for a given project has been thoroughly reviewed and
+approved before it is merged with the main repository. This helps to prevent future issues and 
+ensures a seamless user experience with minimal downtime.
+
+
+Creating a Pull Request
+Creating pull requests may vary from organization to organization based on the tools being used
+and the type of repository (ex: GitHub, BitBucket, etc.). However, creating a pull request
+often involves these same three elements:
+
+Drafting
+When creating a pull request, the developer will first begin with a draft. Here, they will be able
+to title and briefly describe their code changes. They will need to include information about the
+type of update (whether it’s a new feature or a bug fix) as well as its source repository/branch and
+destination repository/branch. A draft pull request cannot be merged until the developer has marked
+it as ready for review.
+
+
+Merging
+
+Merging occurs once a developer’s submitted pull request has been approved by the repository maintainer. Before merging, the repository
+maintainer will need to review the developer’s completed work. They will comment on any issues, and request edits from the developer as needed.
+Once any and all updates have been made, the repository maintainer can then safely merge the updates with the main project repository, making it live
+for end users.
+
+
+
+Updating
+
+If the repository maintainer requires any changes to the code updates before merging, the developer 
+will be alerted and provided with any comments or feedback for fixing the issue. Once the developer
+has resolved the issue, they can update the pull request with their new commits added for further 
+review and approval.
+
+
+
+Pull Request Templates
+
+Pull request templates can be created and stored to help expedite the process and ensure consistency across all team members. When creating
+your pull request template, it’s important to include:
+
+Summary of Code Update: Was this a bug fix or a new feature? Summarize what was accomplished with
+this new code update. Unit Test Cases: Was this code update tested across all devices and
+browsers?
+
+The specifics of your pull request template will vary based on the repository your organization uses.
+Different tools have different capabilities and options to make pull requests a breeze for your team.
+
+An Example of a Pull Request
+Now that we’ve gone through what a pull request is and how they work, let’s take a look at a 
+possible pull request in action.
+
+1. Russell is a developer at a software company that has a mobile application that lets users rate
+and review different wines.
+2. Russell needs to create a new feature that allows the user to highlight their “Five Favorite Wines”
+START FOR FREE
+3. To begin working on this new feature, Russell first creates a fork of the main repository and 
+clones this to his local machine.
+4. Russell then develops this new feature locally.
+5. Once completed, Russell can push his code updates to the forked repository he created.
+6. Now Russell can create a pull request!
+7. Once the pull request has been submitted, Erica (the Repository Maintainer) is alerted to begin
+reviewing Russell’s new code update.
+8. Erica can then request any follow-up commits from Russell as needed.
+9. When any and all change requests are made, Erica will then approve Russell’s pull request.
+10. Russell’s new update is then merged with the main project repository, and application users
+ can now begin using the new application feature.
+
+
+
+
+
+"Answer-to-Ques-8"
+
+
+Forking in GitHub:
+
+When contributing to an open-source project, you will not be able to make the changes directly to 
+the project. Only the repository maintainers have that privilege. What you need to do instead is to 
+fork the specific repository, make the changes to the forked project and then submit a pull request to the
+original project. 
+
+If you clone a repository that you don't have the access to and then try to push the changes 
+directly to that repository, you would get the  following error:
+
+ERROR: Permission to laravel/laravel.git denied to bobbyiliev.
+
+Fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights and the repository exists.
+
+
+This is where Forks come into play! In order to fork a repository, you need to visit the 
+repository via your browser and click on the Fork button on the top right:
+
+Then choose the account that you want to fork the repository to:
+
+Then it might take a few seconds for the repository to be forked under your account:
+
+With that, you would have an exact copy of the repository in question under your account.
+
+The benefit here is that you can now clone the forked repository under your account, make the 
+changes to that repository as normal, and then once you are ready, you can submit a pull request
+to the original repository contributing your changes.
+
+
+
+
+
+
+
+
+
+"Answer-to-Ques-9"
+
+
+GitHub Project Boards:
+
+Github Project Boards is a powerful tool for managing projects and tracking progress. Project boards
+enable you to create a visual representation of your project with columns for To do, In progress, 
+and Done, or other custom columns you would like to use. 
+
+
+
+GitHub Issues:
+
+Github issues are items you can create in a repository to plan, discuss and track your work. You can 
+use issues to track work, give or receive feedback, collaborate on ideas or tasks, and efficiently 
+communicate with others.
+
+
+
+
+Using GitHub Issues
+
+Use GitHub issues to record and discuss ideas, enhancements, tasks, and
+bugs. They make collaboration easier in a variety of ways, by:
+
+• Replacing email for project discussions, ensuring everyone on the team has the complete story.
+
+• Allowing you to cross-link to other issues and pull requests.
+
+• Creating a single, comprehensive record of how and why you made
+certain decisions.
+
+• Allowing you to easily pull the right people into a conversation.
+
+
+
+
+
+
+
+
+
+
+
+"Answer-to-Ques-10"
+
+Common challenges associated with GitHub:
+
+Include not being able to use the tools on the website in the case of new users.
+
+
+
+Best Practices for using Github:
+
+1) Make use of organizations
+2) Avoid commiting large files
+3) Secure your account with two-factor authentification.
+4) Use SSH keys instead of HTTPS
+5) Make effective use of branching.
+6) Use .gitignore to prevent tracking files.
+7) Write thoughtful commit message.
